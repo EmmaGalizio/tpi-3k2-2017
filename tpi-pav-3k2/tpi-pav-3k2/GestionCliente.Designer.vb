@@ -25,33 +25,33 @@ Partial Class GestionCliente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionCliente))
         Me.panelBotones = New System.Windows.Forms.Panel()
         Me.btnBaja = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnNuevoCliente = New System.Windows.Forms.Button()
         Me.gbDatosCliente = New System.Windows.Forms.GroupBox()
-        Me.lblNroCliente = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cbCompusCliente = New System.Windows.Forms.ComboBox()
+        Me.lblComputadorasCliente = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.lblApellido = New System.Windows.Forms.Label()
-        Me.txtApellido = New System.Windows.Forms.TextBox()
-        Me.lblTelefono = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.lblTipoDoc = New System.Windows.Forms.Label()
-        Me.cbTipoDoc = New System.Windows.Forms.ComboBox()
-        Me.lblNroDocumento = New System.Windows.Forms.Label()
-        Me.txtNroDocumento = New System.Windows.Forms.TextBox()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.lblFechaAlta = New System.Windows.Forms.Label()
-        Me.txtFechaAlta = New System.Windows.Forms.MaskedTextBox()
-        Me.lblFechaBaja = New System.Windows.Forms.Label()
         Me.txtFechaBaja = New System.Windows.Forms.MaskedTextBox()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.lblFechaBaja = New System.Windows.Forms.Label()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.txtFechaAlta = New System.Windows.Forms.MaskedTextBox()
+        Me.lblTelefono = New System.Windows.Forms.Label()
+        Me.lblFechaAlta = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.txtNroDocumento = New System.Windows.Forms.TextBox()
+        Me.lblNroDocumento = New System.Windows.Forms.Label()
+        Me.cbTipoDoc = New System.Windows.Forms.ComboBox()
+        Me.lblTipoDoc = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lblNroCliente = New System.Windows.Forms.Label()
         Me.gbDatosComputadora = New System.Windows.Forms.GroupBox()
         Me.lblNroPc = New System.Windows.Forms.Label()
-        Me.lblComputadorasCliente = New System.Windows.Forms.Label()
-        Me.cbCompusCliente = New System.Windows.Forms.ComboBox()
         Me.panelBotones.SuspendLayout()
         Me.gbDatosCliente.SuspendLayout()
         Me.gbDatosComputadora.SuspendLayout()
@@ -77,8 +77,17 @@ Partial Class GestionCliente
         Me.btnBaja.Name = "btnBaja"
         Me.btnBaja.Size = New System.Drawing.Size(64, 64)
         Me.btnBaja.TabIndex = 4
-        Me.btnBaja.Text = "Baja"
+        Me.btnBaja.Text = "Baja Cliente"
         Me.btnBaja.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
+        Me.btnBuscar.Location = New System.Drawing.Point(73, 4)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(64, 64)
+        Me.btnBuscar.TabIndex = 1
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnGuardar
         '
@@ -97,15 +106,6 @@ Partial Class GestionCliente
         Me.btnActualizar.Size = New System.Drawing.Size(64, 64)
         Me.btnActualizar.TabIndex = 2
         Me.btnActualizar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"), System.Drawing.Image)
-        Me.btnBuscar.Location = New System.Drawing.Point(73, 4)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(64, 64)
-        Me.btnBuscar.TabIndex = 1
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnNuevoCliente
         '
@@ -146,22 +146,23 @@ Partial Class GestionCliente
         Me.gbDatosCliente.TabStop = False
         Me.gbDatosCliente.Text = "Datos Cliente"
         '
-        'lblNroCliente
+        'cbCompusCliente
         '
-        Me.lblNroCliente.AutoSize = True
-        Me.lblNroCliente.Location = New System.Drawing.Point(7, 22)
-        Me.lblNroCliente.Name = "lblNroCliente"
-        Me.lblNroCliente.Size = New System.Drawing.Size(62, 13)
-        Me.lblNroCliente.TabIndex = 0
-        Me.lblNroCliente.Text = "Nro Cliente:"
+        Me.cbCompusCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCompusCliente.FormattingEnabled = True
+        Me.cbCompusCliente.Location = New System.Drawing.Point(369, 72)
+        Me.cbCompusCliente.Name = "cbCompusCliente"
+        Me.cbCompusCliente.Size = New System.Drawing.Size(52, 21)
+        Me.cbCompusCliente.TabIndex = 19
         '
-        'TextBox1
+        'lblComputadorasCliente
         '
-        Me.TextBox1.Location = New System.Drawing.Point(76, 14)
-        Me.TextBox1.MaxLength = 8
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(61, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.lblComputadorasCliente.AutoSize = True
+        Me.lblComputadorasCliente.Location = New System.Drawing.Point(284, 80)
+        Me.lblComputadorasCliente.Name = "lblComputadorasCliente"
+        Me.lblComputadorasCliente.Size = New System.Drawing.Size(78, 13)
+        Me.lblComputadorasCliente.TabIndex = 18
+        Me.lblComputadorasCliente.Text = "Computadoras:"
         '
         'lblNombre
         '
@@ -180,6 +181,16 @@ Partial Class GestionCliente
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 3
         '
+        'txtFechaBaja
+        '
+        Me.txtFechaBaja.Enabled = False
+        Me.txtFechaBaja.Location = New System.Drawing.Point(212, 73)
+        Me.txtFechaBaja.Mask = "00/00/0000"
+        Me.txtFechaBaja.Name = "txtFechaBaja"
+        Me.txtFechaBaja.Size = New System.Drawing.Size(65, 20)
+        Me.txtFechaBaja.TabIndex = 17
+        Me.txtFechaBaja.ValidatingType = GetType(Date)
+        '
         'lblApellido
         '
         Me.lblApellido.AutoSize = True
@@ -189,6 +200,15 @@ Partial Class GestionCliente
         Me.lblApellido.TabIndex = 4
         Me.lblApellido.Text = "Apellido:"
         '
+        'lblFechaBaja
+        '
+        Me.lblFechaBaja.AutoSize = True
+        Me.lblFechaBaja.Location = New System.Drawing.Point(144, 80)
+        Me.lblFechaBaja.Name = "lblFechaBaja"
+        Me.lblFechaBaja.Size = New System.Drawing.Size(64, 13)
+        Me.lblFechaBaja.TabIndex = 16
+        Me.lblFechaBaja.Text = "Fecha Baja:"
+        '
         'txtApellido
         '
         Me.txtApellido.Location = New System.Drawing.Point(221, 40)
@@ -196,84 +216,6 @@ Partial Class GestionCliente
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(100, 20)
         Me.txtApellido.TabIndex = 5
-        '
-        'lblTelefono
-        '
-        Me.lblTelefono.AutoSize = True
-        Me.lblTelefono.Location = New System.Drawing.Point(328, 47)
-        Me.lblTelefono.Name = "lblTelefono"
-        Me.lblTelefono.Size = New System.Drawing.Size(52, 13)
-        Me.lblTelefono.TabIndex = 6
-        Me.lblTelefono.Text = "Teléfono:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(387, 40)
-        Me.TextBox2.MaxLength = 15
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
-        '
-        'lblTipoDoc
-        '
-        Me.lblTipoDoc.AutoSize = True
-        Me.lblTipoDoc.Location = New System.Drawing.Point(143, 22)
-        Me.lblTipoDoc.Name = "lblTipoDoc"
-        Me.lblTipoDoc.Size = New System.Drawing.Size(89, 13)
-        Me.lblTipoDoc.TabIndex = 8
-        Me.lblTipoDoc.Text = "Tipo Documento:"
-        '
-        'cbTipoDoc
-        '
-        Me.cbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTipoDoc.FormattingEnabled = True
-        Me.cbTipoDoc.Location = New System.Drawing.Point(238, 14)
-        Me.cbTipoDoc.Name = "cbTipoDoc"
-        Me.cbTipoDoc.Size = New System.Drawing.Size(113, 21)
-        Me.cbTipoDoc.TabIndex = 9
-        '
-        'lblNroDocumento
-        '
-        Me.lblNroDocumento.AutoSize = True
-        Me.lblNroDocumento.Location = New System.Drawing.Point(358, 21)
-        Me.lblNroDocumento.Name = "lblNroDocumento"
-        Me.lblNroDocumento.Size = New System.Drawing.Size(85, 13)
-        Me.lblNroDocumento.TabIndex = 10
-        Me.lblNroDocumento.Text = "Nro Documento:"
-        '
-        'txtNroDocumento
-        '
-        Me.txtNroDocumento.Location = New System.Drawing.Point(450, 14)
-        Me.txtNroDocumento.MaxLength = 11
-        Me.txtNroDocumento.Name = "txtNroDocumento"
-        Me.txtNroDocumento.Size = New System.Drawing.Size(62, 20)
-        Me.txtNroDocumento.TabIndex = 11
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(492, 47)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(86, 13)
-        Me.lblEmail.TabIndex = 12
-        Me.lblEmail.Text = "e-mail (opcional):"
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(584, 40)
-        Me.txtEmail.MaxLength = 60
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(148, 20)
-        Me.txtEmail.TabIndex = 13
-        '
-        'lblFechaAlta
-        '
-        Me.lblFechaAlta.AutoSize = True
-        Me.lblFechaAlta.Location = New System.Drawing.Point(13, 81)
-        Me.lblFechaAlta.Name = "lblFechaAlta"
-        Me.lblFechaAlta.Size = New System.Drawing.Size(61, 13)
-        Me.lblFechaAlta.TabIndex = 14
-        Me.lblFechaAlta.Text = "Fecha Alta:"
         '
         'txtFechaAlta
         '
@@ -285,24 +227,100 @@ Partial Class GestionCliente
         Me.txtFechaAlta.TabIndex = 15
         Me.txtFechaAlta.ValidatingType = GetType(Date)
         '
-        'lblFechaBaja
+        'lblTelefono
         '
-        Me.lblFechaBaja.AutoSize = True
-        Me.lblFechaBaja.Location = New System.Drawing.Point(144, 80)
-        Me.lblFechaBaja.Name = "lblFechaBaja"
-        Me.lblFechaBaja.Size = New System.Drawing.Size(64, 13)
-        Me.lblFechaBaja.TabIndex = 16
-        Me.lblFechaBaja.Text = "Fecha Baja:"
+        Me.lblTelefono.AutoSize = True
+        Me.lblTelefono.Location = New System.Drawing.Point(328, 47)
+        Me.lblTelefono.Name = "lblTelefono"
+        Me.lblTelefono.Size = New System.Drawing.Size(52, 13)
+        Me.lblTelefono.TabIndex = 6
+        Me.lblTelefono.Text = "Teléfono:"
         '
-        'txtFechaBaja
+        'lblFechaAlta
         '
-        Me.txtFechaBaja.Enabled = False
-        Me.txtFechaBaja.Location = New System.Drawing.Point(212, 73)
-        Me.txtFechaBaja.Mask = "00/00/0000"
-        Me.txtFechaBaja.Name = "txtFechaBaja"
-        Me.txtFechaBaja.Size = New System.Drawing.Size(65, 20)
-        Me.txtFechaBaja.TabIndex = 17
-        Me.txtFechaBaja.ValidatingType = GetType(Date)
+        Me.lblFechaAlta.AutoSize = True
+        Me.lblFechaAlta.Location = New System.Drawing.Point(13, 81)
+        Me.lblFechaAlta.Name = "lblFechaAlta"
+        Me.lblFechaAlta.Size = New System.Drawing.Size(61, 13)
+        Me.lblFechaAlta.TabIndex = 14
+        Me.lblFechaAlta.Text = "Fecha Alta:"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(387, 40)
+        Me.TextBox2.MaxLength = 15
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 7
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(584, 40)
+        Me.txtEmail.MaxLength = 60
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(148, 20)
+        Me.txtEmail.TabIndex = 13
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Location = New System.Drawing.Point(492, 47)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(86, 13)
+        Me.lblEmail.TabIndex = 12
+        Me.lblEmail.Text = "e-mail (opcional):"
+        '
+        'txtNroDocumento
+        '
+        Me.txtNroDocumento.Location = New System.Drawing.Point(450, 14)
+        Me.txtNroDocumento.MaxLength = 11
+        Me.txtNroDocumento.Name = "txtNroDocumento"
+        Me.txtNroDocumento.Size = New System.Drawing.Size(62, 20)
+        Me.txtNroDocumento.TabIndex = 11
+        '
+        'lblNroDocumento
+        '
+        Me.lblNroDocumento.AutoSize = True
+        Me.lblNroDocumento.Location = New System.Drawing.Point(358, 21)
+        Me.lblNroDocumento.Name = "lblNroDocumento"
+        Me.lblNroDocumento.Size = New System.Drawing.Size(85, 13)
+        Me.lblNroDocumento.TabIndex = 10
+        Me.lblNroDocumento.Text = "Nro Documento:"
+        '
+        'cbTipoDoc
+        '
+        Me.cbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTipoDoc.FormattingEnabled = True
+        Me.cbTipoDoc.Location = New System.Drawing.Point(238, 14)
+        Me.cbTipoDoc.Name = "cbTipoDoc"
+        Me.cbTipoDoc.Size = New System.Drawing.Size(113, 21)
+        Me.cbTipoDoc.TabIndex = 9
+        '
+        'lblTipoDoc
+        '
+        Me.lblTipoDoc.AutoSize = True
+        Me.lblTipoDoc.Location = New System.Drawing.Point(143, 22)
+        Me.lblTipoDoc.Name = "lblTipoDoc"
+        Me.lblTipoDoc.Size = New System.Drawing.Size(89, 13)
+        Me.lblTipoDoc.TabIndex = 8
+        Me.lblTipoDoc.Text = "Tipo Documento:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(76, 14)
+        Me.TextBox1.MaxLength = 8
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(61, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'lblNroCliente
+        '
+        Me.lblNroCliente.AutoSize = True
+        Me.lblNroCliente.Location = New System.Drawing.Point(7, 22)
+        Me.lblNroCliente.Name = "lblNroCliente"
+        Me.lblNroCliente.Size = New System.Drawing.Size(62, 13)
+        Me.lblNroCliente.TabIndex = 0
+        Me.lblNroCliente.Text = "Nro Cliente:"
         '
         'gbDatosComputadora
         '
@@ -322,24 +340,6 @@ Partial Class GestionCliente
         Me.lblNroPc.Size = New System.Drawing.Size(93, 13)
         Me.lblNroPc.TabIndex = 0
         Me.lblNroPc.Text = "Nro Computadora:"
-        '
-        'lblComputadorasCliente
-        '
-        Me.lblComputadorasCliente.AutoSize = True
-        Me.lblComputadorasCliente.Location = New System.Drawing.Point(284, 80)
-        Me.lblComputadorasCliente.Name = "lblComputadorasCliente"
-        Me.lblComputadorasCliente.Size = New System.Drawing.Size(78, 13)
-        Me.lblComputadorasCliente.TabIndex = 18
-        Me.lblComputadorasCliente.Text = "Computadoras:"
-        '
-        'cbCompusCliente
-        '
-        Me.cbCompusCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbCompusCliente.FormattingEnabled = True
-        Me.cbCompusCliente.Location = New System.Drawing.Point(369, 72)
-        Me.cbCompusCliente.Name = "cbCompusCliente"
-        Me.cbCompusCliente.Size = New System.Drawing.Size(52, 21)
-        Me.cbCompusCliente.TabIndex = 19
         '
         'GestionCliente
         '

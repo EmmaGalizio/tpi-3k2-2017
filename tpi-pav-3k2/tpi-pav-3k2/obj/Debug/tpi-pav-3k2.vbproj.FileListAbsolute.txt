@@ -14,3 +14,7 @@ C:\Drive Emma\Facu\2017\PAV\tpi-pav-3k2\tpi-pav-3k2\bin\Debug\tpi-pav-3k2.exe.co
 C:\Drive Emma\Facu\2017\PAV\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.exe
 C:\Drive Emma\Facu\2017\PAV\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.xml
 C:\Drive Emma\Facu\2017\PAV\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.pdb
+C:\Drive Emma\Facu\2017\PAV 1 3K2\tpi-3k2-2017\tpi-pav-3k2\tpi-pav-3k2\bin\Debug\tpi-pav-3k2.exe.config
+C:\Drive Emma\Facu\2017\PAV 1 3K2\tpi-3k2-2017\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.exe
+C:\Drive Emma\Facu\2017\PAV 1 3K2\tpi-3k2-2017\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.xml
+C:\Drive Emma\Facu\2017\PAV 1 3K2\tpi-3k2-2017\tpi-pav-3k2\tpi-pav-3k2\obj\Debug\tpi-pav-3k2.pdb
